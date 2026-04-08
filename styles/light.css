@@ -34,3 +34,7 @@
     --text-shadow: #ff8dcb;
   }
 }
+
+.theme-light .decoration-rec {
+  display: none;
+}
