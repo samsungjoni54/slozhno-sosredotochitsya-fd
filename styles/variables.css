@@ -4,7 +4,7 @@
 */
 
 :root {
-  --page_background_image-light: url("./image/cover-image-light.png");
+  --page_background_image-light: url("../images/cover-image-light.png");
   --title-color: #db00ff;
   --title-shadow: #ff0070;
   --subtitle-color: #000028;

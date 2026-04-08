@@ -32,15 +32,15 @@
 .decorated-zone::after {
   right: 10px;
   top: 10px;
-  border-top: 1px solid #ff0070;
-  border-right: 1px solid #ff0070;
+  border-top: 1px solid var(--accent-text-color);
+  border-right: 1px solid var(--accent-text-color);
 }
 
 .decorated-zone::before {
   left: 10px;
   bottom: 10px;
-  border-left: 1px solid #ff0070;
-  border-bottom: 1px solid #ff0070;
+  border-left: 1px solid var(--accent-text-color);
+  border-bottom: 1px solid var(--accent-text-color);
 }
 .footer.decorated-zone::after {
   right: 10px;
@@ -90,15 +90,14 @@
   line-height: 1em;
 }
 .header__theme-menu-button:hover {
-  text-decoration: underline;
+  outline: 1px solid var(--accent-text-color);
   cursor: pointer;
 }
 .header__theme-menu-button:focus-visible {
-  text-decoration: underline;
   outline: none;
+  border-bottom: 1px solid var(--accent-text-color);
 }
 .header__theme-menu-button_active {
-  color: var(--accent-text-color);
   outline: 1px solid var(--accent-text-color);
 }
 
@@ -128,7 +127,6 @@
   margin-bottom: 50px;
 }
 .section.images {
-  margin-bottom: 0;
   margin-bottom: 50px;
 }
 .section-title {
@@ -168,7 +166,14 @@
   text-decoration: none;
 }
 .text-shadow:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px solid var(--text-shadow);
+}
+.text-shadow:focus-visible {
+  outline: 1px solid var(--accent-text-color);
+}
+.text-shadow:focus {
+  outline: none;
 }
 
 .image_section-title {
@@ -195,6 +200,7 @@
   justify-content: center;
   align-items: center;
   padding: 0 10px;
+  min-height: 668px;
 }
 .footer-title {
   line-height: 0.825em;
@@ -209,7 +215,6 @@
 @media (width >= 768px) {
   .header {
     padding: 25px 20px 30px;
-
     grid-template-rows: 1fr min-content 1fr;
   }
   .header__theme-menu {
@@ -321,11 +326,10 @@
 @media (width >= 1024px) {
   .header {
     padding: 20px 20px 26px;
-
-    /* grid-template-rows: 1fr min-content 1fr; */
+    grid-template-rows: 1fr min-content 1fr;
   }
   .header-title {
-    font-size: 157px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-top: 5px;
   }
   .header__theme-menu {
@@ -355,16 +359,5 @@
 
   .footer-title {
     font-size: 157px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --page_background_image: url("/images/cover-image-dark.png");
-  }
-}
-@media (prefers-color-scheme: light) {
-  :root {
-    --page_background_image: url("/images/cover-image-light.png");
   }
 }
