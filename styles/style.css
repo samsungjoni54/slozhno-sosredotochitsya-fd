@@ -129,6 +129,7 @@
 }
 .section.images {
   margin-bottom: 0;
+  margin-bottom: 50px;
 }
 .section-title {
   font-size: 18px;
@@ -187,9 +188,7 @@
   width: 100%;
   object-fit: contain;
 }
-.section.images {
-  margin-bottom: 50px;
-}
+
 .footer {
   height: 100vh;
   display: flex;
