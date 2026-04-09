@@ -10,7 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 
-  --page_background_image-light: url("../images/cover-image-light.png");
+  --page_background_image: url("../images/cover-image-dark.png");
   --title-color: #db00ff;
   --title-shadow: #ff0070;
   --subtitle-color: #000028;
@@ -25,4 +25,11 @@
   :root {
     --page_background_image: url("../images/cover-image-dark.png");
   }
+  .decoration-rec {
+    display: block;
+  }
+}
+
+.theme-dark .decoration-rec {
+  display: block;
 }

@@ -33,6 +33,9 @@
     --text-color: #353430;
     --text-shadow: #ff8dcb;
   }
+  .decoration-rec {
+    display: none;
+  }
 }
 
 .theme-light .decoration-rec {
